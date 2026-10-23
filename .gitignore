@@ -1,0 +1,18 @@
+products/**
+!products/.gitkeep
+
+# Local data and authentication stay on this computer.
+.DS_Store
+node_modules/
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+.credentials*
+/logs/
+/backups/
+/knowledge/
+/skills/
+*.tsbuildinfo

@@ -1,0 +1,38 @@
+- insert:
+    - id: ui-skin-superk
+      name: '/Users/niannian/deepseek-harness/packages/client/ui-skin-superk/lib/index.js'
+
+# SuperK supplies the navigation shell; project/session/settings plugins stay mounted.
+- id: ui-sidebar
+  disabled: true
+
+# Personal skill sources for the native loader.
+- id: skill-filesystem
+  disabled: false
+  config:
+    includeDefaultRoots: false
+    customSkillDirs:
+      - /Users/niannian/SuperK/skills
+      - /Users/niannian/.codex/skills
+      - /Users/niannian/.agents/skills
+
+# AiHubMix gateway. The key stays in the native credential store, never here.
+- id: llm-pi-ai
+  config:
+    providers:
+      aihubmix:
+        displayName: AiHubMix
+        apiKeyEnv: AIHUBMIX_API_KEY
+        api: openai-completions
+        baseURL: https://aihubmix.com/v1
+        models:
+          - id: claude-sonnet-5
+            name: Claude Sonnet 5
+            contextWindow: 32768
+            maxTokens: 4096
+
+# New SuperK sessions use the configured gateway instead of an AWS catalog route.
+- id: agent-default-model
+  config:
+    provider: aihubmix
+    model: claude-sonnet-5

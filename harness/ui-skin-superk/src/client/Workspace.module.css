@@ -1,0 +1,59 @@
+.shell { font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'PingFang SC', sans-serif; }
+.sidebar { box-sizing:border-box; height:100%; display:flex; flex-direction:column; padding:22px 14px 12px; background:var(--dsw-specific-sidebar-fill); color:var(--dsw-alias-label-primary); gap:6px; overflow:hidden; }
+.brandRow { display:flex; align-items:center; justify-content:space-between; padding:2px 10px 22px; min-height:54px; }
+.brandRow strong { font-size:22px; line-height:28px; font-weight:500; letter-spacing:-.8px; }
+.brandRow small { display:block; font-size:11px; line-height:18px; color:var(--dsw-alias-label-secondary); }
+.sidebar button { cursor:pointer; font:inherit; color:inherit; border:0; border-radius:var(--dsw-radius-md); background:transparent; min-height:36px; transition:background .16s,transform .16s; }
+.sidebar button:hover {background:var(--dsw-alias-interactive-bg-hover)}
+.sidebar button:active {transform:scale(.98)}
+.navRow,.activeRow,.newButton { display:flex; align-items:center; gap:12px; padding:10px 13px; text-align:left; font-size:13px !important; line-height:20px; }
+.activeRow { background:var(--dsw-alias-state-business-tertiary) !important; color:var(--dsw-alias-brand-primary) !important; }
+.newButton { background:var(--dsw-alias-bg-layer-1) !important; box-shadow:var(--dsw-elevation-soft); margin-bottom:12px; }
+.projects {flex:1; min-height:130px; overflow:auto; margin-top:24px}
+.projects details { height:100%; display:flex; flex-direction:column; }
+.sidebar summary { cursor:pointer; color:var(--dsw-alias-label-secondary); font-size:11px; line-height:20px; padding:8px 12px; }
+.projectBody { height:calc(100% - 36px); min-height:180px; }
+.more {max-height:150px; overflow:auto;}
+.footer {padding-top:12px;border-top:0.5px solid var(--dsw-alias-border-l1)}
+.mutedButton {background:transparent;border:0;color:var(--dsw-alias-label-secondary);cursor:pointer;padding:8px;font-size:12px;line-height:20px;}
+.header { min-height:68px; display:flex; gap:16px; align-items:center; justify-content:space-between; padding:10px 28px; flex-shrink:0; border-bottom:0.5px solid var(--dsw-alias-border-l1); }
+.nativeHeader { flex:1; min-width:0; display:flex; align-items:center; }
+.apiGroup {display:flex; align-items:center; gap:14px;flex-shrink:0}
+.apiButton,.balance,.composerButton,.plus {cursor:pointer; border:0; background:transparent; color:var(--dsw-alias-label-secondary); font-size:12px;line-height:18px; border-radius:var(--dsw-radius-sm);padding:7px 10px;transition:background .16s,transform .16s;}
+.apiButton { color:var(--dsw-alias-brand-primary);background:var(--dsw-alias-state-business-tertiary); }
+.balance {text-align:right}.balance small {display:block;font-size:10px;line-height:14px;color:var(--dsw-alias-label-secondary)}
+.composerButton:hover,.plus:hover,.balance:hover {background:var(--dsw-alias-interactive-bg-hover)}
+.plus {padding:7px 3px;display:inline-flex;align-items:center;}
+.apiButton:active,.composerButton:active,.plus:active {transform:scale(.96)}
+.hero { width:auto !important; height:auto !important; display:flex !important; flex-direction:column; align-items:center; gap:15px; color:var(--dsw-alias-label-primary); font-size:36px; line-height:46px; font-weight:500; letter-spacing:-1px; padding-bottom:26px; }
+.hero small {font-size:13px;line-height:22px;color:var(--dsw-alias-label-secondary);letter-spacing:0;font-weight:400}
+.shell :global(span):has(> .hero) {width:100%;height:auto;}
+.shell :global(span):has(> .hero) + :global(span) {display:none;}
+.page {box-sizing:border-box;height:100%;overflow:auto;padding:64px clamp(24px,5vw,80px) 32px;background:radial-gradient(ellipse at 95% 0%,var(--dsw-alias-state-business-tertiary),transparent 45%),var(--dsw-alias-bg-base);color:var(--dsw-alias-label-primary);}
+.pageHeading {margin-bottom:32px}.pageHeading small {font-size:10px;line-height:20px;letter-spacing:2px;color:var(--dsw-alias-label-secondary)}
+.page h1 {font-size:32px;line-height:42px;font-weight:500;letter-spacing:-1px;margin:10px 0}.pageHeading p {color:var(--dsw-alias-label-secondary);font-size:13px;line-height:22px;}
+.toolbar {display:flex;align-items:center;gap:12px;margin:14px 0;flex-wrap:wrap}.toolbar input {flex:1;min-width:140px}
+.stageGrid {display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;margin:32px 0;}
+.stageCard,.noteCard { text-align:left; cursor:pointer; color:var(--dsw-alias-label-primary); padding:26px; background:color-mix(in srgb,var(--dsw-alias-bg-layer-1) 86%,transparent); backdrop-filter:blur(12px); border:0; border-radius:var(--dsw-radius-lg); box-shadow:var(--dsw-elevation-soft); transition:transform .18s,background .18s; }
+.stageCard {min-height:206px}.stageCard>span {display:block;color:var(--dsw-alias-brand-primary);font-size:24px;line-height:32px;font-weight:400;margin-bottom:24px}
+.stageCard h2,.noteCard h2 {font-size:16px;line-height:24px;font-weight:500;margin:8px 0}
+.stageCard p,.noteCard p {font-size:12px;line-height:20px;color:var(--dsw-alias-label-secondary);margin:8px 0}.stageCard small,.noteCard small {font-size:11px;line-height:18px;color:var(--dsw-alias-label-secondary)}
+.stageCard:hover,.noteCard:hover {transform:translateY(-3px);background:var(--dsw-alias-state-business-tertiary)}
+.stageCard:active,.noteCard:active {transform:scale(.985)}
+.noteGrid {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin:24px 0}.noteCard p {white-space:pre-wrap;overflow-wrap:anywhere;max-height:100px;overflow:hidden}
+.folderBar {display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-size:12px;line-height:20px}.folderChip {border:0.5px solid var(--dsw-alias-border-l2);color:var(--dsw-alias-label-secondary);background:transparent;padding:6px 12px;border-radius:var(--dsw-radius-sm);cursor:pointer}
+.storage {font-size:11px;line-height:18px;color:var(--dsw-alias-label-secondary);margin-top:32px;}
+.list {max-height:45vh;overflow:auto;margin:14px 0;}.skillRow {display:flex;gap:12px;padding:15px 12px;cursor:pointer;border-bottom:0.5px solid var(--dsw-alias-border-l1);align-items:flex-start;font-size:13px;line-height:20px;}
+.skillRow:hover {background:var(--dsw-alias-interactive-bg-hover)}.skillRow input {accent-color:var(--dsw-alias-brand-primary);margin-top:4px}.skillRow span{min-width:0}.skillRow strong {font-weight:500}.skillRow small {display:block;font-size:12px;line-height:20px;color:var(--dsw-alias-label-secondary);overflow-wrap:anywhere;margin-top:4px}.path {font-size:10px !important;}
+.modal {width:min(700px,calc(100vw - 32px));max-height:calc(100dvh - 48px);overflow:auto;}
+.modal textarea {box-sizing:border-box;display:block;resize:vertical;width:100%;min-height:180px;max-height:40vh;margin:16px 0;padding:14px;border:0.5px solid var(--dsw-alias-border-l2);border-radius:var(--dsw-radius-md);color:var(--dsw-alias-label-primary);background:var(--dsw-alias-bg-base);font:inherit;font-size:13px;line-height:22px}
+.modal input {max-width:100%;}.hint {font-size:12px;line-height:21px;color:var(--dsw-alias-label-secondary);margin:12px 0;}.error {color:var(--dsw-alias-state-danger-primary);font-size:12px;line-height:20px;margin:12px 0;overflow-wrap:anywhere}
+.empty {padding:48px 20px;text-align:center;color:var(--dsw-alias-label-secondary);font-size:13px;line-height:22px;}
+.fileButton {display:block;cursor:pointer;margin:14px 0;color:var(--dsw-alias-link);font-size:13px;line-height:22px}.fileButton input {display:block;margin:8px 0;color:var(--dsw-alias-label-secondary)}.fileButton small {display:block;color:var(--dsw-alias-label-secondary);font-size:11px;line-height:18px}
+.shell button:focus-visible,.shell summary:focus-visible,.shell textarea:focus-visible {outline:2px solid var(--dsw-focus-ring-color);outline-offset:3px}
+@media(max-width:1100px){.stageGrid{grid-template-columns:repeat(2,minmax(0,1fr))}.noteGrid{grid-template-columns:repeat(2,minmax(0,1fr))}.header{padding:8px 16px}.balance{display:none}}
+@media(max-width:720px){.page{padding:32px 20px}.noteGrid{grid-template-columns:1fr}.hero{font-size:28px;line-height:36px}.apiButton{font-size:11px}.header{gap:4px;padding:6px 10px}}
+@media(prefers-reduced-motion:reduce){.shell *{transition:none !important}}
+
+/* Scope the legacy hero title to SuperK without changing its owning package. */
+.shell :global([class$='_titleGroup']):has(:global([class$='_previewBadge'])) { display:none; }
