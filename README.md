@@ -1,6 +1,6 @@
 # SuperK
 
-个人工作台的私有代码仓库。当前界面基于 DeepSeek Harness，通过个人外观插件和启动配置加载。
+个人工作台的开源代码仓库。当前界面基于 DeepSeek Harness，通过个人外观插件和启动配置加载。
 
 ## 当前使用入口
 
@@ -21,8 +21,8 @@
 
 模型密钥通过原生凭据服务在本地填写，不要写进 Git、脚本或聊天。AiHubMix 配置说明见 [AIHUBMIX.md](AIHUBMIX.md)，试用说明见 [TRIAL.md](TRIAL.md)。
 
-## 私有数据与许可
+## 本地数据与开源许可
 
-仓库使用 GitHub Private 可见性，仅限获授权账号访问。日志、个人知识库、Skill 内容、本地产出和备份由 `.gitignore` 排除，仍保留在本机。这是代码归档，不是个人数据的完整备份。
+仓库公开托管于 GitHub。日志、个人知识库、Skill 内容、本地产出和备份由 `.gitignore` 排除，仍保留在本机。这是代码归档，不是个人数据的完整备份。
 
-依赖的 DeepSeek Harness 及第三方代码保持各自原有许可证；外观包附带其 MIT 许可文本。私有托管不会改写第三方许可。
+SuperK 项目代码按 [MIT License](LICENSE) 开源。依赖的 DeepSeek Harness 及第三方代码保持各自原有许可证；外观包内保留 DeepSeek 的 MIT 许可和版权声明。
